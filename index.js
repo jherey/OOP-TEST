@@ -9,7 +9,7 @@ class Person {
 		return this._name;
 	}
 
-	talk = (newName) => {
+	talk(newName) {
 		return `${this._name} is talking to ${newName}`;
 	}
 }
@@ -21,11 +21,11 @@ class Parent extends Person {
 		this._basicSalary = basicSalary;
 	}
 
-	getChildren = (children) => {
+	getChildren(children) {
 		return `${name} has ${children} children`;
 	}
 
-	calculateChildrenAllowance = (children) => {
+	calculateChildrenAllowance(children) {
 		let allowance;
 		if (children <= 2) {
 			allowance = this._basicSalary * 0.2;
@@ -42,9 +42,30 @@ class Child extends Person {
 		super(name, sex, maritalStatus);
 		this._age = age;
 		this._school = school;
+		this._addFriend = [];
 	}
 
-	getSchool = () => {
+	getSchool() {
 		return `${this._name} attends ${this._school} school`;
 	}
+
+	addFriend(friend) {
+		this._addFriend.push(friend);
+		return this._addFriend;
+	}
 }
+
+
+
+const p1 = new Person('Jerry', 'male', 'single');
+
+console.log(
+	`name: ${p1.getName()}`,
+	`talk: ${p1.talk('seyi')}`
+);
+
+const p2 = new Parent('Annmary', 'female', 'married', 4, 100000);
+console.log(
+	`name: ${p2.getChildren()}`,
+	`allowance: ${p2.calculateChildrenAllowance()}`
+);
