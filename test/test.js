@@ -31,3 +31,21 @@ describe('Person tests', () => {
 	});
 });
 
+describe('Parent tests', () => {
+	const Adult = new Parent('Olufayo', 'male', 'married', 3, 100000);
+
+	it('should get the number of children', () => {
+		expect(Adult.getChildren())
+			.to.equal('Olufayo has 3 children')
+	});
+
+	it('should get the salary of the parent', () => {
+		expect(Adult.getSalary())
+			.to.equal('Olufayo earns 100000 as basic salary')
+	});
+
+	it('should get calculate the children allowance', () => {
+		expect(Adult.calculateChildrenAllowance())
+			.to.equal('Olufayo\'s children allowance is 40000')
+	});
+});
