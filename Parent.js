@@ -7,7 +7,7 @@ class Parent extends Person {
 		this._basicSalary = basicSalary;
 	}
 
-	getChildren(children) {
+	getChildren() {
 		return `${this._name} has ${this._children} children`;
 	}
 
@@ -15,14 +15,14 @@ class Parent extends Person {
 		return `${this._name} earns ${this._basicSalary} as basic salary`;
 	}
 
-	calculateChildrenAllowance(children) {
+	calculateChildrenAllowance() {
 		let allowance;
-		if (children <= 2) {
+		if (this._children <= 2) {
 			allowance = this._basicSalary * 0.2;
 			return this._basicSalary + allowance;
 		} else {
 			allowance = this._basicSalary * 0.4;
-			return this._basicSalary + allowance;
+			return `${this._name}'s children allowance is ${allowance}`;
 		}
 	}
 }
