@@ -1,4 +1,4 @@
-import Person from './person';
+import Person from './Person';
 
 class Parent extends Person {
 	constructor(name, sex, maritalStatus, children, basicSalary) {
