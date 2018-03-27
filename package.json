@@ -1,0 +1,23 @@
+{
+  "name": "oop-test",
+  "version": "1.0.0",
+  "description": "An app to model a person object",
+  "main": "person.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jherey/OOP-TEST.git"
+  },
+  "author": "Jeremiah Olufayo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jherey/OOP-TEST/issues"
+  },
+  "homepage": "https://github.com/jherey/OOP-TEST#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  }
+}
