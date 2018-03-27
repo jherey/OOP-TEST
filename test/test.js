@@ -49,3 +49,27 @@ describe('Parent tests', () => {
 			.to.equal('Olufayo\'s children allowance is 40000')
 	});
 });
+
+describe('Child tests', () => {
+	const Boy = new Child('Seyi', 'male', 'single', 5, 'Unique Kiddies');
+
+	it('should get the name of the child', () => {
+		expect(Boy.getName())
+			.to.equal('Seyi')
+	});
+
+	it('should get the age of the child', () => {
+		expect(Boy.getAge())
+			.to.equal('Seyi is 5 years old')
+	});
+
+	it('should get the school of the child', () => {
+		expect(Boy.getSchool())
+			.to.equal('Seyi attends Unique Kiddies School')
+	});
+
+	it('should add a new friend', () => {
+		expect(Boy.addFriend('Ken'))
+			.to.equal('Ken')
+	});
+});
